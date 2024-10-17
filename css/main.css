@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.top-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 70%;
+  z-index: -99;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.dashboard {
+  width: 85%;
+  margin: 1rem auto;
+}
+.dashboard header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.dashboard header .sub-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.dashboard header .dark-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.dashboard header .dark-toggle .dark-btn {
+  cursor: pointer;
+  width: 60px;
+  height: 25px;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(hsl(210, 78%, 56%)), to(hsl(146, 68%, 55%)));
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  border: none;
+  padding: 0 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+}
+.dashboard header .dark-toggle .dark-btn .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .dashboard header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dashboard header .dashboard-title,
+  .dashboard header .dark-toggle {
+    width: 100%;
+  }
+  .dashboard header .dashboard-title h2 {
+    font-size: 1.4rem;
+    padding-bottom: 3px;
+  }
+  .dashboard header .dark-toggle {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 12px;
+    margin-top: 15px;
+    border-top: 1px solid hsl(228, 34%, 66%);
+  }
+}
+
+.light {
+  background-color: hsl(0, 0%, 100%);
+  color: textDarkBlue;
+}
+.light .top-bg {
+  background-color: hsl(225, 100%, 98%);
+}
+.light .dashboard .sub-title {
+  color: hsl(228, 12%, 44%);
+}
+.light .dashboard .social-cards .social-card {
+  background: hsl(227, 47%, 96%);
+}
+.light .dashboard .social-cards .social-card:hover {
+  background-color: hsl(230, 22%, 74%);
+}
+.light .dashboard .social-cards .social-card .followers .follower_text {
+  color: hsl(228, 12%, 44%);
+}
+.light .dashboard .social-cards .social-card .increment {
+  color: hsl(163, 72%, 41%);
+}
+.light .dashboard .social-cards .social-card .down {
+  color: hsl(356, 69%, 56%);
+}
+.light .dashboard .overview-cards .overview-card {
+  background: hsl(227, 47%, 96%);
+}
+.light .dashboard .overview-cards .overview-card:hover {
+  background-color: hsl(230, 22%, 74%);
+}
+.light .dashboard .dark-toggle .dark-btn {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.light .dashboard .dark-toggle .dark-btn .dot {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.dark {
+  background-color: hsl(230, 17%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+.dark .top-bg {
+  background-color: hsl(232, 19%, 15%);
+}
+.dark .dashboard .sub-title {
+  color: hsl(228, 34%, 66%);
+}
+.dark .dashboard .social-cards .social-card {
+  background: hsl(228, 28%, 20%);
+}
+.dark .dashboard .social-cards .social-card:hover {
+  background-color: hsl(230, 17%, 14%);
+}
+.dark .dashboard .social-cards .social-card .followers .follower_text {
+  color: hsl(228, 34%, 66%);
+}
+.dark .dashboard .social-cards .social-card .user span {
+  color: hsl(228, 34%, 66%);
+}
+.dark .dashboard .social-cards .social-card .increment {
+  color: hsl(163, 72%, 41%);
+}
+.dark .dashboard .social-cards .social-card .down {
+  color: hsl(356, 69%, 56%);
+}
+.dark .dashboard .overview-cards .overview-card {
+  background: hsl(228, 28%, 20%);
+}
+.dark .dashboard .overview-cards .overview-card:hover {
+  background-color: hsl(230, 17%, 14%);
+}
+.dark .dashboard .dark-toggle .dark-btn {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.dark .dashboard .dark-toggle .dark-btn .dot {
+  background-color: hsl(228, 28%, 20%);
+}
+
+.social-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.social-cards .facebook {
+  border-top: 5px solid hsl(208, 92%, 53%);
+}
+.social-cards .twitter {
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+.social-cards .instagram-border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(hsl(37, 97%, 70%)), to(hsl(329, 70%, 58%)));
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  height: 5px;
+}
+.social-cards .youtube {
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+.social-cards .social-card {
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.social-cards .social-card .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.social-cards .social-card .followers {
+  text-align: center;
+}
+.social-cards .social-card .followers .follower_number {
+  font-size: 4rem;
+  font-weight: 800;
+}
+.social-cards .social-card .followers .follower_text {
+  font-size: 0.7rem;
+  letter-spacing: 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.social-cards .social-card .increment {
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+.social-cards .social-card .increment i {
+  font-size: 0.6rem;
+}
+
+.heading {
+  padding: 2rem 0;
+}
+
+.overview-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.overview-cards .overview-card {
+  border-radius: 5px;
+  cursor: pointer;
+  width: 23%;
+  min-width: 250px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+}
+@media (max-width: 1000px) {
+  .overview-cards .overview-card {
+    width: 30%;
+  }
+}
+@media (max-width: 625px) {
+  .overview-cards .overview-card {
+    width: 100%;
+  }
+}
+.overview-cards .overview-card .card-views,
+.overview-cards .overview-card .card-percent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.overview-cards .overview-card .card-views .number,
+.overview-cards .overview-card .card-percent .number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.overview-cards .overview-card .card-views .increment,
+.overview-cards .overview-card .card-percent .increment {
+  font-size: 0.9rem;
+  color: hsl(163, 72%, 41%);
+}
+.overview-cards .overview-card .card-views .down,
+.overview-cards .overview-card .card-percent .down {
+  color: hsl(356, 69%, 56%);
+}
+.overview-cards .overview-card .card-views p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}

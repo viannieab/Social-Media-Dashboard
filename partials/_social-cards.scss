@@ -1,0 +1,64 @@
+.social-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  .facebook {
+    border-top: 5px solid $facebook;
+  }
+  .twitter {
+    border-top: 5px solid $twitter;
+  }
+  .instagram-border {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: $instagram;
+    height: 5px;
+  }
+  .youtube {
+    border-top: 5px solid $youtube;
+  }
+  .social-card {
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .followers {
+      text-align: center;
+
+      .follower_number {
+        font-size: 4rem;
+        font-weight: 800;
+      }
+      .follower_text {
+        font-size: 0.7rem;
+        letter-spacing: 0.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    .increment {
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      i {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

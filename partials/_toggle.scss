@@ -1,0 +1,99 @@
+.light {
+  background-color: $whiteText;
+  color: textDarkBlue;
+  .top-bg {
+    background-color: $paleBlue;
+  }
+  .dashboard {
+    .sub-title {
+      color: $lightDarkGrayishBlue;
+    }
+    .social-cards {
+      .social-card {
+        background: $lightGrayBlue;
+        &:hover {
+          background-color: $toggle-light;
+        }
+        .followers {
+          .follower_text {
+            color: $lightDarkGrayishBlue;
+          }
+        }
+        .increment {
+          color: $limeGreen;
+        }
+        .down {
+          color: $brightRed;
+        }
+      }
+    }
+    .overview-cards {
+      .overview-card {
+        background: $lightGrayBlue;
+        &:hover {
+          background-color: $toggle-light;
+        }
+      }
+    }
+    .dark-toggle {
+      .dark-btn {
+        justify-content: flex-end;
+        .dot {
+          background-color: $whiteText;
+        }
+      }
+    }
+  }
+}
+.dark {
+  background-color: $darkblue;
+  color: $whiteText;
+  .top-bg {
+    background-color: $topDarkBlue;
+  }
+  .dashboard {
+    .sub-title {
+      color: $textColor;
+    }
+    .social-cards {
+      .social-card {
+        background: $cardBg;
+        &:hover {
+          background-color: $textDarkBlue;
+        }
+        .followers {
+          .follower_text {
+            color: $textColor;
+          }
+        }
+        .user {
+          span {
+            color: $textColor;
+          }
+        }
+        .increment {
+          color: $limeGreen;
+        }
+        .down {
+          color: $brightRed;
+        }
+      }
+    }
+    .overview-cards {
+      .overview-card {
+        background: $cardBg;
+        &:hover {
+          background-color: $textDarkBlue;
+        }
+      }
+    }
+    .dark-toggle {
+      .dark-btn {
+        justify-content: flex-start;
+        .dot {
+          background-color: $cardBg;
+        }
+      }
+    }
+  }
+}

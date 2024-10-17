@@ -1,0 +1,52 @@
+.heading {
+  padding: 2rem 0;
+}
+
+.overview-cards {
+  display: flex;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .overview-card {
+    border-radius: 5px;
+    cursor: pointer;
+    width: 23%;
+    @media (max-width: 1000px) {
+      width: 30%;
+    }
+    @media (max-width: 625px) {
+      width: 100%;
+    }
+
+    min-width: 250px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    // align-items: center;
+    .card-views,
+    .card-percent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .number {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .increment {
+        font-size: 0.9rem;
+        color: $limeGreen;
+      }
+      .down {
+        color: $brightRed;
+      }
+    }
+    .card-views {
+      p {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
